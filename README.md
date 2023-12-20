@@ -8,5 +8,6 @@
 - [매크로](./docs/macro.md)
 - [반복](./docs/loop.md)
 - [조건](./docs/match.md)
+- [구조체](./docs/structure.md)
 
 TBD
