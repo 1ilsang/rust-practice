@@ -15,5 +15,6 @@
 - [OwnerShip](./docs/ownerShip.md)
 - [Impl](./docs/impl.md)
 - [Vector](./docs/vector.md)
+- [String](./docs/string.md)
 
 TBD

@@ -1,19 +1,7 @@
-struct My_struct {
-  no: i32,
-}
-impl My_struct {
-  fn show_no(&self) {
-    println!("{:?}", self.no);
-  }
-
-  fn set_no() -> Self {
-    Self { no: 321 }
-  }
+fn print(string: &str) {
+  println!("{:?}", string);
 }
 fn main() {
-  let my_nums = vec![1, 2, 3];
-  for n in &my_nums {
-    println!("{:?}", n);
-  }
-  my_nums.len(); // 3
+  let sliced_string = "Hello, world!"; // &str
+  print(sliced_string)
 }
