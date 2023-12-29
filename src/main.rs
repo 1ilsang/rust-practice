@@ -1,18 +1,16 @@
+struct My_struct {
+  no: i32,
+}
+impl My_struct {
+  fn show_no(&self) {
+    println!("{:?}", self.no);
+  }
+
+  fn set_no() -> Self {
+    Self { no: 321 }
+  }
+}
 fn main() {
-  enum Food {
-    Burger,
-  };
-  let menu = Food::Burger;
-  let drink = "sprite";
-  let order = match menu {
-    Food::Burger => {
-      if drink == "sprite" {
-        true
-      } else {
-        false
-      }
-    }
-    _ => false,
-  };
-  println!("{:?}", order);
+  let set_no = My_struct::set_no();
+  set_no.show_no();
 }

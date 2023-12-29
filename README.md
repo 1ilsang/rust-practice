@@ -12,5 +12,7 @@
 - [Structure](./docs/structure.md)
 - [Tuple](./docs/tuple.md)
 - [Expression](./docs/expression.md)
+- [Memory](./docs/memory.md)
+- [Impl](./docs/impl.md)
 
 TBD
