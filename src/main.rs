@@ -11,6 +11,9 @@ impl My_struct {
   }
 }
 fn main() {
-  let set_no = My_struct::set_no();
-  set_no.show_no();
+  let my_nums = vec![1, 2, 3];
+  for n in &my_nums {
+    println!("{:?}", n);
+  }
+  my_nums.len(); // 3
 }

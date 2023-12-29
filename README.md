@@ -12,7 +12,8 @@
 - [Structure](./docs/structure.md)
 - [Tuple](./docs/tuple.md)
 - [Expression](./docs/expression.md)
-- [Memory](./docs/memory.md)
+- [OwnerShip](./docs/ownerShip.md)
 - [Impl](./docs/impl.md)
+- [Vector](./docs/vector.md)
 
 TBD

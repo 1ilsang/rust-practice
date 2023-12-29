@@ -1,6 +1,4 @@
-# Memory
-
-## OwnerShip
+# OwnerShip
 
 Rust는 '소유권' 모델을 통해 메모리 안정성을 높힌 언어이다.
 
