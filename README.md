@@ -11,5 +11,6 @@
 - [Enum](./docs/enum.md)
 - [Structure](./docs/structure.md)
 - [Tuple](./docs/tuple.md)
+- [Expression](./docs/expression.md)
 
 TBD
