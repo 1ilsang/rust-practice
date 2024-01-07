@@ -7,6 +7,7 @@
 - [Function](./docs/function.md)
 - [Macro](./docs/macro.md)
 - [Loop](./docs/loop.md)
+- [If](./docs/if.md)
 - [Match](./docs/match.md)
 - [Enum](./docs/enum.md)
 - [Structure](./docs/structure.md)
@@ -16,5 +17,7 @@
 - [Impl](./docs/impl.md)
 - [Vector](./docs/vector.md)
 - [String](./docs/string.md)
+- [Option](./docs/option.md)
+- [Documentation](./docs/documentation.md)
 
 TBD

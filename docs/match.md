@@ -1,19 +1,4 @@
-# 조건
-
-## If
-
-```rs
-let a = 123;
-if a == 123 {
-  println!("Hit!");
-} else {
-  printlnt!("None");
-}
-```
-
-러스트에서는 조건문에 괄호가 존재하지 않는다.
-
-## Match
+# Match
 
 ```rs
 let my_bool = false;
@@ -45,3 +30,46 @@ match my_int {
 |      | Match                                                          | If-else                                                     |
 | ---- | -------------------------------------------------------------- | ----------------------------------------------------------- |
 | 조건 | 모든 가능성을 나열해야 한다. 그렇지 않으면 컴파일 되지 않는다. | 모든 가능성을 나열하지 않아도 된다. 필요한 조건만 나열한다. |
+
+## match with enum
+
+```rs
+enum Developer {
+  name(char),
+  age(i32),
+}
+
+fn main() {
+  let age = Developer::age(22);
+  match age {
+    Developer::age(2) => println!("Hit! 2"),
+    Developer::age(other) => println!("Developer age is {:?}", other),
+    Developer::name('a') => println!("Hello, 1ilsang!"),
+    _ => (),
+  }
+}
+```
+
+enum이 [연관된 데이터](./enum.md#associated-data)로 정의되어 있을 경우 위와 같이 처리하면 된다.
+
+## match with structure
+
+```rs
+struct Developer {
+  name: String,
+  age: i32,
+}
+
+fn main() {
+  let me = Developer {
+    name: "1ilsang".to_owned(),
+    age: 16,
+  };
+  match me {
+    Developer { age: 16, .. } => println!("Hello, 16!"),
+    Developer { age, .. } => println!("Age is {:?}", age),
+  }
+}
+```
+
+구조체일 경우 `..`으로 나머지 필드를 생략 할 수 있다. 따라서 `Developer { age: 16, .. }`의 경우 Developer 구조체의 age 필드가 16인지만 확인하겠다는 의미이다.

@@ -1,3 +1,8 @@
+# Documentation
+
+러스트는 문서화를 자동으로 해준다. 일반 주석(`//`)이 아닌 `///`으로 남기면 문서에 추가된다.
+
+```rs
 /// 이후 서베이 확인에 필요한 개발자 구조체
 struct Developer {
   /// 실명 뿐만 아니라 닉네임도 가능합니다.
@@ -26,3 +31,8 @@ fn main() {
   let valid = checkAge(me);
   println!("{:?}", valid);
 }
+```
+
+![example](https://github.com/1ilsang/dev/assets/23524849/5f895d90-006a-4ad7-ade1-e42f14f10c9f)
+
+![example (2)](https://github.com/1ilsang/dev/assets/23524849/0b30cbb6-ea94-4433-8afa-7ed49ce09138)

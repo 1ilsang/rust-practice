@@ -48,12 +48,38 @@ if (a === Test.A) console.log("A");
 // 0, "A"
 ```
 
-타입스트립트는 덕타입(\*1) 위의 구조적 타입 시스템이기 때문에 `Test.A`의 값 `0`이 될수만 있다면 비교 변수가 어떠한 형태든 신경쓰지 않는다. 따라서 `a === 0`이든 `a === Test.A`이든 상관하지 않고 통과된다.
+타입스트립트는 덕타입(\*1) 위의 구조적 타입 시스템이기 때문에 `Test.A`의 값 `0`이 될 수만 있다면 비교 변수가 어떠한 형태든 신경 쓰지 않는다. 따라서 `a === 0`이든 `a === Test.A`이든 상관하지 않고 통과된다.
 
 > \*1: 어떤 새가 오리처럼 운다면 나는 그 새를 오리라고 하겠다.
 
-하지만 러스트는 "명목적 타입 시스템" 언어이기 때문에 그 값 `0`이 중요한게 아닌 `Test::A`라는 형태 자체가 중요하다. 따라서 `a == 0`은 타입이 전혀 다르기 때문에 비교 대상이 될 수 없다. 오직 `a == Test::A`로 비교해야만 한다.
+하지만 러스트는 "명목적 타입 시스템" 언어이기 때문에 그 값 `0`이 중요한 게 아닌 `Test::A`라는 형태 자체가 중요하다. 따라서 `a == 0`은 타입이 전혀 다르기 때문에 비교 대상이 될 수 없다. 오직 `a == Test::A`로 비교해야만 한다.
 
 - [구조적 타입 시스템이 더 궁금하다면?](https://1ilsang.dev/posts/book/woowa-type#%ED%83%80-%EC%96%B8%EC%96%B4%EC%9D%98-%ED%83%80%EC%9E%85-%EC%8B%9C%EC%8A%A4%ED%85%9C%EA%B3%BC-%EB%B9%84%EA%B5%90)
 
 </details>
+
+## Associated data
+
+연관된 데이터는 enum을 더 효과적으로 사용할 수 있게 해 준다.
+
+```rs
+enum Direction {
+  Left,
+  Right,
+}
+
+enum Developer {
+  developer,
+  name(String, String),
+  age(i32),
+  direction(Direction),
+}
+
+fn main() {
+  let name = Developer::name("Sang".to_string(), "Chul".to_string());
+  let age = Developer::age(12);
+  let direction = Developer::direction(Direction::Left);
+}
+```
+
+enum의 값을 미리 선언하지 않고 동적으로 받을 수 있다. 또한 enum내부에 enum을 위치하게 하는 등 유연하게 사용이 가능하다.
