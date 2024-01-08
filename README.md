@@ -27,5 +27,6 @@
 - [Option](./docs/option.md)
 - [Result](./docs/result.md)
 - [HashMap](./docs/hashmap.md)
+- [Closure](./docs/closure.md)
 
 TBD
