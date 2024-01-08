@@ -19,5 +19,6 @@
 - [String](./docs/string.md)
 - [Option](./docs/option.md)
 - [Documentation](./docs/documentation.md)
+- [Result](./docs/result.md)
 
 TBD
