@@ -1,8 +1,11 @@
-fn add_fn(a: i32, b: i32) -> Option<i32> {
-  Some(a + b)
+mod math {
+  pub fn add(a: i32, b: i32) -> i32 {
+    a + b
+  }
 }
 
 fn main() {
-  let sum_double = add_fn(1, 1).map(|num| num * 2);
-  println!("{:?}", sum_double);
+  // use math::*;
+  // let sum = add(1, 2);
+  let sum = math::add(1, 2);
 }

@@ -28,5 +28,4 @@
 - [Result](./docs/result.md)
 - [HashMap](./docs/hashmap.md)
 - [Closure](./docs/closure.md)
-
-TBD
+- [Module](./docs/module.md)
