@@ -1,3 +1,6 @@
+# Test
+
+```rs
 fn get_uppercase(word: &str) -> String {
   word.to_uppercase()
 }
@@ -15,3 +18,10 @@ mod test {
 }
 
 fn main() {}
+```
+
+> $ cargo test
+
+[모듈](./module.md)로 테스트 코드를 작성했기 때문에 `all_caps` 함수에 접근하기 위해 `use crate::*`를 선언해야 한다.
+
+이후 `cargo test`를 실행하면 테스트 결과를 볼 수 있다.

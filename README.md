@@ -1,12 +1,13 @@
 # Rust Programming
 
-러스트 간단하게 이해해보기
+러스트 간단하게 이해해보기.
 
 ## 유용한 것들
 
 - [Install](./docs/install.md)
 - [Documentation](./docs/documentation.md)
 - [CLI Input](./docs/cli.md)
+- [Test](./docs/test.md)
 
 ## Rust 문법
 
