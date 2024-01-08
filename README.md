@@ -2,7 +2,14 @@
 
 러스트 간단하게 이해해보기
 
+## 유용한 것들
+
 - [Install](./docs/install.md)
+- [Documentation](./docs/documentation.md)
+- [CLI Input](./docs/cli.md)
+
+## Rust 문법
+
 - [Variable](./docs/variable.md)
 - [Function](./docs/function.md)
 - [Macro](./docs/macro.md)
@@ -18,7 +25,6 @@
 - [Vector](./docs/vector.md)
 - [String](./docs/string.md)
 - [Option](./docs/option.md)
-- [Documentation](./docs/documentation.md)
 - [Result](./docs/result.md)
 - [HashMap](./docs/hashmap.md)
 

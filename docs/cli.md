@@ -1,3 +1,6 @@
+# CLI
+
+```rs
 use std::io;
 
 // io::Result 타입은 Error를 따로 지정하지 않아도 됨
@@ -19,3 +22,6 @@ fn main() {
     }
   }
 }
+```
+
+CLI로 입력을 받고 싶다면 `std::io`를 사용하면 된다.
