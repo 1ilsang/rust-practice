@@ -8,6 +8,7 @@
 - [Documentation](./docs/documentation.md)
 - [CLI Input](./docs/cli.md)
 - [Test](./docs/test.md)
+- [Crate](./docs/crate.md)
 
 ## Rust 문법
 
