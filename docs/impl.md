@@ -37,16 +37,19 @@ struct My_struct {
   no: i32,
 }
 impl My_struct {
-  fn set_no() -> Self {
+  fn new() -> Self {
     Self { no: 321 }
+  }
+  fn show_no(&self) {
+    println!("{:?}", self.no);
   }
 }
 fn main() {
-  let my_struct = My_struct::set_no();
+  let my_struct = My_struct::new();
   my_struct.show_no(); // 321
 }
 ```
 
 만약 구조체를 동적으로 선언하고 싶다면 `impl`에서 위와 같이 하면 된다. `Self` 키워드는 자기 자신을 반환하므로 `My_struct` 구조체를 의미하게 된다.
 
-> NOTE: `my_struct.set_no()`는 되지 않는다. 구조체의 함수로 사용되고 싶다면 `&self` 파라미터가 반드시 있어야 한다.
+> NOTE: `my_struct.new()`는 되지 않는다. 구조체의 함수로 사용되고 싶다면 `&self` 파라미터가 반드시 있어야 한다.

@@ -31,3 +31,4 @@
 - [Closure](./docs/closure.md)
 - [Module](./docs/module.md)
 - [Range](./docs/range.md)
+- [Trait](./docs/trait.md)

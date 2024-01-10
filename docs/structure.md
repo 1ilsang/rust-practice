@@ -17,3 +17,19 @@ let my_box = Box {
 `struct`로 선언된 구조체를 통해 변수의 형태를 강제할 수 있게 된다.
 
 변수는 구조체의 모든 필드를 구현해야 하므로 명세와 같은 역할을 해준다.
+
+참고로 구조체에 `fn`과 같은 함수는 선언할 수 없다. 함수도 같이 선언하려면 [impl](./impl.md)에서 구현해야 한다.
+
+## function parameter
+
+```rs
+fn show(obj: My_struct) {
+  obj.show_no();
+}
+fn main() {
+  let my_struct = My_struct::new();
+  show(my_struct); // 321
+}
+```
+
+구조체 명을 타입으로 사용하면 구조체를 함수 인자로 넘길수 있다.
