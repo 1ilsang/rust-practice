@@ -30,3 +30,4 @@
 - [HashMap](./docs/hashmap.md)
 - [Closure](./docs/closure.md)
 - [Module](./docs/module.md)
+- [Range](./docs/range.md)
