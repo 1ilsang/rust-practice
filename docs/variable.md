@@ -38,3 +38,15 @@ let b = "abc"; // String
 let a = 123; // Immutable
 let mut b = 123; // Mutable
 ```
+
+## 상수의 선언
+
+```rs
+const MAX_COUNT: i32 = 10;
+
+fn check_count(count: i32) -> bool {
+  count < MAX_COUNT
+}
+```
+
+`const`는 주로 상수의 선언으로 사용된다. 매직 넘버를 사용해야 할 경우 `const`로 상수화하는 것이 좋다.
