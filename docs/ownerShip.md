@@ -59,3 +59,13 @@ let main() {
 ```
 
 **메모리의 소유는 "선언"되었을 때 정해진다.** 따라서 `my_sub_data`는 `sub` 함수가 소유하고 있으며 `my_main_data`는 `main` 함수가 소유하고 있다.
+
+## with filter
+
+```rs
+let a: Option<i32> = Some(1);
+let a_filtered = a.filter(|num| num == 1); // Error! can't compare `&i32` with `{integer}`
+let a_filtered = a.filter(|num| num == &1); // OK
+```
+
+[클로저](./closure.md)에서 값을 비교할 때도 소유권을 신경 써야 한다. 위 예에서는 filter 함수를 사용할 때 원소 `num`을 빌려와서 쓰므로 타입을 맞춰야 한다.

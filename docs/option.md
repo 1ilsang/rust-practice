@@ -28,3 +28,13 @@ match me.age {
 ```
 
 Option의 `Some`과 `None`의 경우 앞을 생략해도 된다(`Option::Some(..)` 안해도 됨).
+
+## 값 꺼내기
+
+```rs
+let a = Some(1);
+let b = a.unwrap_or_else(|| 0); // a의 값이 None이면 0을 반환한다.
+dbg!(b); // 1
+```
+
+`unwrap_or_else` 메서드를 사용하면 option의 값을 가져올 수 있다. 변수 `b`는 `Option` 타입이 아닌 `i32` 타입의 숫자 `1`이 된다.
