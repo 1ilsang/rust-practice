@@ -33,3 +33,21 @@ fn main() {
 ```
 
 구조체 명을 타입으로 사용하면 구조체를 함수 인자로 넘길수 있다.
+
+## Tuple structure
+
+```rs
+struct TupleStructure(i32, String, i32);
+impl TupleStructure {
+  pub fn new(a: i32, b: String, c: i32) -> Self {
+    Self(a, b, c)
+  }
+}
+
+fn main() {
+  let a = TupleStructure::new(1, "2".to_owned(), 3);
+  println!("{}, {}, {}", a.0, a.1, a.2);
+}
+```
+
+구조체를 [튜플](./tuple.md)로 만들수 있다.

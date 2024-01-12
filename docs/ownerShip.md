@@ -69,3 +69,56 @@ let a_filtered = a.filter(|num| num == &1); // OK
 ```
 
 [클로저](./closure.md)에서 값을 비교할 때도 소유권을 신경 써야 한다. 위 예에서는 filter 함수를 사용할 때 원소 `num`을 빌려와서 쓰므로 타입을 맞춰야 한다.
+
+## Lifetime
+
+```rs
+#[derive(Debug)]
+enum Answer {
+  Yes,
+  No,
+}
+
+#[derive(Debug)]
+struct Form {
+  question: &Answer, // Error! missing lifetime specifier.
+}
+
+fn main() {
+  let form;
+  {
+    let answer = Answer::Yes;
+    form = Form { question: &answer };
+  }
+  println!("{:?}", form);
+}
+```
+
+위 코드는 정상적으로 실행되지 않는다. 중괄호가 끝나면서 `answer`은 삭제되지만 `form` 변수에서 `answer` 값을 계속 빌려야 하기 때문이다.
+
+따라서 이러한 경우를 체크하기 위해 수명 주석을 추가해야 한다.
+
+```rs
+#[derive(Debug)]
+enum Answer {
+  Yes,
+  No,
+}
+
+// 수명이 필요한 주석은 'abc... 등으로 작성한다.
+#[derive(Debug)]
+struct Form<'a> {
+  question: &'a Answer,
+}
+
+fn main() {
+  let form;
+  {
+    let answer = Answer::Yes;
+    form = Form { question: &answer }; // Error! answer does not live long enough.
+  }
+  println!("{:?}", form);
+}
+```
+
+이제 정상적으로 에러가 노출된다. `answer`를 중괄호 밖으로 가져가야 한다.
